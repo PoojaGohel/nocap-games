@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Color Switch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <a class="back" href="../../index.html">← All games</a>
+      <h1>Color Switch</h1>
+      <p class="tag">Bounce up through as many spinning rings as you can.</p>
+    </header>
+
+    <section class="stage">
+      <canvas id="screen" aria-label="Color Switch game screen"></canvas>
+      <div class="pad" aria-label="Game buttons">
+        <button type="button" data-key="left" aria-label="Left">◀</button>
+        <button type="button" data-key="up" aria-label="Up">▲</button>
+        <button type="button" data-key="down" aria-label="Down">▼</button>
+        <button type="button" data-key="right" aria-label="Right">▶</button>
+        <button type="button" data-key="space" class="wide">space</button>
+      </div>
+      <div class="toolbar">
+        <button type="button" id="restart">↺ Restart</button>
+        <span class="hint">Keyboard works anywhere on the page. On a phone, tap the screen or use the buttons.</span>
+        <span id="error" hidden></span>
+      </div>
+    </section>
+
+    <section class="rules">
+      <h2>How to play</h2>
+      <dl>
+        <dt>Goal</dt><dd>Bounce up through as many spinning rings as you can.</dd>
+        <dt>Controls</dt><dd>Tap, or press <kbd>space</kbd>, to bounce up. Gravity pulls you down.</dd>
+        <dt>Rule</dt><dd>You can only pass through the part of a ring that is YOUR color. Wrong color = game over.</dd>
+        <dt>Switch</dt><dd>Touching a 🌈 changes your color, so watch the next ring carefully.</dd>
+        <dt>Lose</dt><dd>Hitting a wrong color, or falling off the bottom of the screen.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <script src="engine.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

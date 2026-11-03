@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Match 3</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <a class="back" href="../../index.html">← All games</a>
+      <h1>Match 3</h1>
+      <p class="tag">Reach the target score (green bar) before your 20 moves run out.</p>
+    </header>
+
+    <section class="stage">
+      <canvas id="screen" aria-label="Match 3 game screen"></canvas>
+      <div class="pad" aria-label="Game buttons">
+        <button type="button" data-key="left" aria-label="Left">◀</button>
+        <button type="button" data-key="up" aria-label="Up">▲</button>
+        <button type="button" data-key="down" aria-label="Down">▼</button>
+        <button type="button" data-key="right" aria-label="Right">▶</button>
+        <button type="button" data-key="space" class="wide">space</button>
+      </div>
+      <div class="toolbar">
+        <button type="button" id="restart">↺ Restart</button>
+        <span class="hint">Keyboard works anywhere on the page. On a phone, tap the screen or use the buttons.</span>
+        <span id="error" hidden></span>
+      </div>
+    </section>
+
+    <section class="rules">
+      <h2>How to play</h2>
+      <dl>
+        <dt>Goal</dt><dd>Reach the target score (green bar) before your 20 moves run out.</dd>
+        <dt>Swap</dt><dd>Tap a fruit, then tap the fruit next to it to swap them. Or press and swipe toward a neighbor.</dd>
+        <dt>Match</dt><dd>A swap only works if it makes a line of 3 or more of the same fruit. Otherwise they swap back for free.</dd>
+        <dt>Combos</dt><dd>Fruit falls after a match. New matches from falling fruit are combos and score double, triple and more.</dd>
+        <dt>Levels</dt><dd>Each level has a higher target. If there are no possible moves, the board reshuffles.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <script src="engine.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

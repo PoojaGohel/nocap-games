@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Tower Defense</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <a class="back" href="../../index.html">← All games</a>
+      <h1>Tower Defense</h1>
+      <p class="tag">Stop the bugs from walking all the way to the 🏁. You have 10 ❤️.</p>
+    </header>
+
+    <section class="stage">
+      <canvas id="screen" aria-label="Tower Defense game screen"></canvas>
+      <div class="pad" aria-label="Game buttons">
+        <button type="button" data-key="left" aria-label="Left">◀</button>
+        <button type="button" data-key="up" aria-label="Up">▲</button>
+        <button type="button" data-key="down" aria-label="Down">▼</button>
+        <button type="button" data-key="right" aria-label="Right">▶</button>
+        <button type="button" data-key="space" class="wide">space</button>
+      </div>
+      <div class="toolbar">
+        <button type="button" id="restart">↺ Restart</button>
+        <span class="hint">Keyboard works anywhere on the page. On a phone, tap the screen or use the buttons.</span>
+        <span id="error" hidden></span>
+      </div>
+    </section>
+
+    <section class="rules">
+      <h2>How to play</h2>
+      <dl>
+        <dt>Goal</dt><dd>Stop the bugs from walking all the way to the 🏁. You have 10 ❤️.</dd>
+        <dt>Build</dt><dd>Tap the grass (not the path) to build a 🗼 tower for 50 🪙.</dd>
+        <dt>Upgrade</dt><dd>Tap a tower to upgrade it (more damage, range and speed). Max level is ⭐⭐⭐.</dd>
+        <dt>Coins</dt><dd>Every bug you squash pays coins. 🦗 crickets are fast, 🐌 snails are tough.</dd>
+        <dt>Waves</dt><dd>There is a short break between waves. Tap ▶ next wave (or press <kbd>space</kbd>) to start early.</dd>
+        <dt>Tip</dt><dd>Build where the path bends. A tower there can hit bugs on two parts of the path.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <script src="engine.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

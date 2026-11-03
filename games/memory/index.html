@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Memory</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <a class="back" href="../../index.html">← All games</a>
+      <h1>Memory</h1>
+      <p class="tag">Find all the matching emoji pairs, then level up.</p>
+    </header>
+
+    <section class="stage">
+      <canvas id="screen" aria-label="Memory game screen"></canvas>
+      <div class="pad" aria-label="Game buttons">
+        <button type="button" data-key="left" aria-label="Left">◀</button>
+        <button type="button" data-key="up" aria-label="Up">▲</button>
+        <button type="button" data-key="down" aria-label="Down">▼</button>
+        <button type="button" data-key="right" aria-label="Right">▶</button>
+        <button type="button" data-key="space" class="wide">space</button>
+      </div>
+      <div class="toolbar">
+        <button type="button" id="restart">↺ Restart</button>
+        <span class="hint">Keyboard works anywhere on the page. On a phone, tap the screen or use the buttons.</span>
+        <span id="error" hidden></span>
+      </div>
+    </section>
+
+    <section class="rules">
+      <h2>How to play</h2>
+      <dl>
+        <dt>Goal</dt><dd>Find all the matching emoji pairs, then level up.</dd>
+        <dt>How</dt><dd>Tap or click two cards. A match stays face up. If they don't match, they flip back.</dd>
+        <dt>Peek</dt><dd>Each level starts by showing every card so you can memorize them. Bigger levels give you more time.</dd>
+        <dt>Levels</dt><dd>6 levels: 6, 8, 12, 16, 20, then 24 cards. Memorize time: 4, 6, 9, 12, 15, then 18 seconds.</dd>
+        <dt>Stars</dt><dd>⭐⭐⭐ for finishing in about one move per pair. Collect up to 18 stars across all 6 levels.</dd>
+        <dt>Next</dt><dd>Tap or press <kbd>space</kbd> after a level to start the next one.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <script src="engine.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

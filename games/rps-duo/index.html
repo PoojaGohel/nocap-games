@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <a class="back" href="../../index.html">← All games</a>
+      <h1>Rock Paper Scissors · 2 players</h1>
+      <p class="tag">Pass and play. First to 5 wins. Your pick stays secret until both players pick.</p>
+    </header>
+
+    <section class="stage">
+      <canvas id="screen" aria-label="Rock Paper Scissors game screen"></canvas>
+      <div class="pad" aria-label="Game buttons">
+        <button type="button" data-key="left" aria-label="Left">◀</button>
+        <button type="button" data-key="up" aria-label="Up">▲</button>
+        <button type="button" data-key="down" aria-label="Down">▼</button>
+        <button type="button" data-key="right" aria-label="Right">▶</button>
+        <button type="button" data-key="space" class="wide">space</button>
+      </div>
+      <div class="toolbar">
+        <button type="button" id="restart">↺ Restart</button>
+        <span class="hint">Keyboard works anywhere on the page. On a phone, tap the screen or use the buttons.</span>
+        <span id="error" hidden></span>
+      </div>
+    </section>
+
+    <section class="rules">
+      <h2>How to play</h2>
+      <dl>
+        <dt>Goal</dt><dd>First to 5 wins. Rock beats scissors, scissors beats paper, paper beats rock.</dd>
+        <dt>Pass</dt><dd>PINK picks while BLUE looks away, then passes the device. BLUE picks, then both hands are shown.</dd>
+        <dt>Keys</dt><dd>Tap a hand, or press <kbd>R</kbd> <kbd>P</kbd> <kbd>S</kbd> (or <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd>). Tap or press <kbd>space</kbd> to go on.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <script src="engine.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

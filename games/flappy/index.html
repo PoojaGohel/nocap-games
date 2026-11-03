@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Flappy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <a class="back" href="../../index.html">← All games</a>
+      <h1>Flappy</h1>
+      <p class="tag">Fly through the gaps between the pipes.</p>
+    </header>
+
+    <section class="stage">
+      <canvas id="screen" aria-label="Flappy game screen"></canvas>
+      <div class="pad" aria-label="Game buttons">
+        <button type="button" data-key="left" aria-label="Left">◀</button>
+        <button type="button" data-key="up" aria-label="Up">▲</button>
+        <button type="button" data-key="down" aria-label="Down">▼</button>
+        <button type="button" data-key="right" aria-label="Right">▶</button>
+        <button type="button" data-key="space" class="wide">space</button>
+      </div>
+      <div class="toolbar">
+        <button type="button" id="restart">↺ Restart</button>
+        <span class="hint">Keyboard works anywhere on the page. On a phone, tap the screen or use the buttons.</span>
+        <span id="error" hidden></span>
+      </div>
+    </section>
+
+    <section class="rules">
+      <h2>How to play</h2>
+      <dl>
+        <dt>Goal</dt><dd>Fly through the gaps between the pipes.</dd>
+        <dt>Keys</dt><dd><kbd>space</kbd> or <kbd>↑</kbd> to flap.</dd>
+        <dt>Phone</dt><dd>Tap the screen.</dd>
+        <dt>Score</dt><dd>+1 for every pipe you pass. Your best score is saved until you press Restart.</dd>
+        <dt>Lose</dt><dd>Hit a pipe or the ground. Tap to try again.</dd>
+        <dt>Tip</dt><dd>Small, steady taps beat panic tapping.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <script src="engine.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

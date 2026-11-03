@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Battleship</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <a class="back" href="../../index.html">← All games</a>
+      <h1>Battleship · vs bot</h1>
+      <p class="tag">Sink all 4 enemy ships (12 squares) before the bot sinks yours.</p>
+    </header>
+
+    <section class="stage">
+      <canvas id="screen" aria-label="Battleship game screen"></canvas>
+      <div class="pad" aria-label="Game buttons">
+        <button type="button" data-key="left" aria-label="Left">◀</button>
+        <button type="button" data-key="up" aria-label="Up">▲</button>
+        <button type="button" data-key="down" aria-label="Down">▼</button>
+        <button type="button" data-key="right" aria-label="Right">▶</button>
+        <button type="button" data-key="space" class="wide">space</button>
+      </div>
+      <div class="toolbar">
+        <button type="button" id="restart">↺ Restart</button>
+        <span class="hint">Keyboard works anywhere on the page. On a phone, tap the screen or use the buttons.</span>
+        <span id="error" hidden></span>
+      </div>
+    </section>
+
+    <section class="rules">
+      <h2>How to play</h2>
+      <dl>
+        <dt>Goal</dt><dd>Sink all 4 enemy ships (12 squares) before the bot sinks yours.</dd>
+        <dt>Fire</dt><dd>Tap a square on ENEMY WATERS (right). 💥 = hit, dot = miss. You and the bot take turns.</dd>
+        <dt>Your fleet</dt><dd>The left board shows your ships and where the bot fired (🔥 = hit).</dd>
+        <dt>The bot</dt><dd>It searches in a checkerboard pattern. Once it hits, it fires around that spot.</dd>
+        <dt>Ships</dt><dd>Battleship 4 · cruiser 3 · sub 3 · speedboat 2. Sunk ships turn dark red.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <script src="engine.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Tug of War</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <a class="back" href="../../index.html">← All games</a>
+      <h1>Tug of War · 2 players</h1>
+      <p class="tag">Pull the 🚩 flag all the way to your side.</p>
+    </header>
+
+    <section class="stage">
+      <canvas id="screen" aria-label="Tug of War game screen"></canvas>
+      <div class="pad" aria-label="Game buttons">
+        <button type="button" data-key="left" aria-label="Left">◀</button>
+        <button type="button" data-key="up" aria-label="Up">▲</button>
+        <button type="button" data-key="down" aria-label="Down">▼</button>
+        <button type="button" data-key="right" aria-label="Right">▶</button>
+        <button type="button" data-key="space" class="wide">space</button>
+      </div>
+      <div class="toolbar">
+        <button type="button" id="restart">↺ Restart</button>
+        <span class="hint">Keyboard works anywhere on the page. On a phone, tap the screen or use the buttons.</span>
+        <span id="error" hidden></span>
+      </div>
+    </section>
+
+    <section class="rules">
+      <h2>How to play</h2>
+      <dl>
+        <dt>Goal</dt><dd>Pull the 🚩 flag all the way to your side.</dd>
+        <dt class="pink">Pink</dt><dd>Mash <kbd>A</kbd>, or keep tapping the left half.</dd>
+        <dt class="blue">Blue</dt><dd>Mash <kbd>L</kbd>, or keep tapping the right half.</dd>
+        <dt>How</dt><dd>Wait for 3-2-1. Every press pulls the flag one step toward you.</dd>
+        <dt>Win</dt><dd>The flag reaches your colored zone. Press or tap again for a rematch.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <script src="engine.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
