@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Light Bikes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <a class="back" href="../../index.html">← All games</a>
+      <h1>Light Bikes · 2 players</h1>
+      <p class="tag">Your bike never stops and leaves a glowing trail. Make the other player crash.</p>
+    </header>
+
+    <section class="stage">
+      <canvas id="screen" aria-label="Light Bikes game screen"></canvas>
+      <div class="pad" aria-label="Game buttons">
+        <button type="button" data-key="left" aria-label="Left">◀</button>
+        <button type="button" data-key="up" aria-label="Up">▲</button>
+        <button type="button" data-key="down" aria-label="Down">▼</button>
+        <button type="button" data-key="right" aria-label="Right">▶</button>
+        <button type="button" data-key="space" class="wide">space</button>
+      </div>
+      <div class="toolbar">
+        <button type="button" id="restart">↺ Restart</button>
+        <span class="hint">Keyboard works anywhere on the page. On a phone, tap the screen or use the buttons.</span>
+        <span id="error" hidden></span>
+      </div>
+    </section>
+
+    <section class="rules">
+      <h2>How to play</h2>
+      <dl>
+        <dt>Goal</dt><dd>Your bike never stops and leaves a glowing trail. Make the other player crash.</dd>
+        <dt class="pink">Pink</dt><dd><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> to turn.</dd>
+        <dt class="blue">Blue</dt><dd>Arrow keys to turn.</dd>
+        <dt>Phone</dt><dd>Tap your half of the screen in the direction you want to go.</dd>
+        <dt>Lose</dt><dd>Hit a wall, your own trail, or the other trail. If both crash at once, it's a draw.</dd>
+        <dt>Rounds</dt><dd>Press <kbd>space</kbd> or tap for the next round. Wins are counted at the top.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <script src="engine.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

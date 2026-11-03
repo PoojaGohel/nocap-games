@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Swing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <a class="back" href="../../index.html">← All games</a>
+      <h1>Swing</h1>
+      <p class="tag">Swing from rope to rope as far as you can without falling into the lava.</p>
+    </header>
+
+    <section class="stage">
+      <canvas id="screen" aria-label="Swing game screen"></canvas>
+      <div class="pad" aria-label="Game buttons">
+        <button type="button" data-key="left" aria-label="Left">◀</button>
+        <button type="button" data-key="up" aria-label="Up">▲</button>
+        <button type="button" data-key="down" aria-label="Down">▼</button>
+        <button type="button" data-key="right" aria-label="Right">▶</button>
+        <button type="button" data-key="space" class="wide">space</button>
+      </div>
+      <div class="toolbar">
+        <button type="button" id="restart">↺ Restart</button>
+        <span class="hint">Keyboard works anywhere on the page. On a phone, tap the screen or use the buttons.</span>
+        <span id="error" hidden></span>
+      </div>
+    </section>
+
+    <section class="rules">
+      <h2>How to play</h2>
+      <dl>
+        <dt>Goal</dt><dd>Swing from rope to rope as far as you can without falling into the lava.</dd>
+        <dt>Controls</dt><dd>Hold the screen or <kbd>space</kbd> to grab the nearest 📍 in front of you. Let go to fly.</dd>
+        <dt>Start</dt><dd>You begin on a rope. Press and hold, then let go at the top of the swing.</dd>
+        <dt>Tip</dt><dd>Let go while swinging forward and up, then grab the next rope while you are still flying.</dd>
+        <dt>Score</dt><dd>Distance, plus 20 for every 🍌.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <script src="engine.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

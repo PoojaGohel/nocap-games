@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Stick Hero</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <a class="back" href="../../index.html">← All games</a>
+      <h1>Stick Hero</h1>
+      <p class="tag">Get the 🥷 from platform to platform.</p>
+    </header>
+
+    <section class="stage">
+      <canvas id="screen" aria-label="Stick Hero game screen"></canvas>
+      <div class="pad" aria-label="Game buttons">
+        <button type="button" data-key="left" aria-label="Left">◀</button>
+        <button type="button" data-key="up" aria-label="Up">▲</button>
+        <button type="button" data-key="down" aria-label="Down">▼</button>
+        <button type="button" data-key="right" aria-label="Right">▶</button>
+        <button type="button" data-key="space" class="wide">space</button>
+      </div>
+      <div class="toolbar">
+        <button type="button" id="restart">↺ Restart</button>
+        <span class="hint">Keyboard works anywhere on the page. On a phone, tap the screen or use the buttons.</span>
+        <span id="error" hidden></span>
+      </div>
+    </section>
+
+    <section class="rules">
+      <h2>How to play</h2>
+      <dl>
+        <dt>Goal</dt><dd>Get the 🥷 from platform to platform.</dd>
+        <dt>Controls</dt><dd>Hold the screen or <kbd>space</kbd> to grow the stick. Let go and it falls over to make a bridge.</dd>
+        <dt>Rule</dt><dd>The stick has to land on the next platform. Too short or too long, and you fall.</dd>
+        <dt>Perfect</dt><dd>Land the stick right on the red dot for +1 bonus.</dd>
+        <dt>Harder</dt><dd>Platforms get thinner as your score goes up.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <script src="engine.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <a class="back" href="../../index.html">← All games</a>
+      <h1>Tic Tac Toe</h1>
+      <p class="tag">Get 3 ❌ in a row before the ⭕ bot does: across, down, or diagonal.</p>
+    </header>
+
+    <section class="stage">
+      <canvas id="screen" aria-label="Tic Tac Toe game screen"></canvas>
+      <div class="pad" aria-label="Game buttons">
+        <button type="button" data-key="left" aria-label="Left">◀</button>
+        <button type="button" data-key="up" aria-label="Up">▲</button>
+        <button type="button" data-key="down" aria-label="Down">▼</button>
+        <button type="button" data-key="right" aria-label="Right">▶</button>
+        <button type="button" data-key="space" class="wide">space</button>
+      </div>
+      <div class="toolbar">
+        <button type="button" id="restart">↺ Restart</button>
+        <span class="hint">Keyboard works anywhere on the page. On a phone, tap the screen or use the buttons.</span>
+        <span id="error" hidden></span>
+      </div>
+    </section>
+
+    <section class="rules">
+      <h2>How to play</h2>
+      <dl>
+        <dt>Goal</dt><dd>Get 3 ❌ in a row before the ⭕ bot does: across, down, or diagonal.</dd>
+        <dt>Controls</dt><dd>Click or tap a square. You always go first.</dd>
+        <dt>Bot</dt><dd>It takes a win when it can and blocks yours.</dd>
+        <dt>Tip</dt><dd>Set up two ways to win at once. The bot can only block one.</dd>
+        <dt>Next</dt><dd>Tap after a game to play again.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <script src="engine.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

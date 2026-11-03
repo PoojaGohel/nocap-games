@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Rhythm</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <a class="back" href="../../index.html">← All games</a>
+      <h1>Rhythm</h1>
+      <p class="tag">Hit each note exactly when it reaches the ring at the bottom of its lane.</p>
+    </header>
+
+    <section class="stage">
+      <canvas id="screen" aria-label="Rhythm game screen"></canvas>
+      <div class="pad" aria-label="Game buttons">
+        <button type="button" data-key="left" aria-label="Left">◀</button>
+        <button type="button" data-key="up" aria-label="Up">▲</button>
+        <button type="button" data-key="down" aria-label="Down">▼</button>
+        <button type="button" data-key="right" aria-label="Right">▶</button>
+        <button type="button" data-key="space" class="wide">space</button>
+      </div>
+      <div class="toolbar">
+        <button type="button" id="restart">↺ Restart</button>
+        <span class="hint">Keyboard works anywhere on the page. On a phone, tap the screen or use the buttons.</span>
+        <span id="error" hidden></span>
+      </div>
+    </section>
+
+    <section class="rules">
+      <h2>How to play</h2>
+      <dl>
+        <dt>Goal</dt><dd>Hit each note exactly when it reaches the ring at the bottom of its lane.</dd>
+        <dt>Keys</dt><dd><kbd>D</kbd> <kbd>F</kbd> <kbd>J</kbd> <kbd>K</kbd> for the 4 lanes (or <kbd>←</kbd> <kbd>↓</kbd> <kbd>↑</kbd> <kbd>→</kbd>).</dd>
+        <dt>Phone</dt><dd>Tap anywhere in the lane.</dd>
+        <dt>Score</dt><dd>PERFECT, GREAT or OK depending on timing. Combos add bonus points.</dd>
+        <dt>Hype</dt><dd>Hits fill the hype meter and misses drain it. If it empties, the song fails.</dd>
+        <dt>Clear</dt><dd>Survive the 60 second song to get a grade: S, A, B or C.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <script src="engine.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

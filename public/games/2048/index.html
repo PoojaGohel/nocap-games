@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>2048</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <a class="back" href="../../index.html">← All games</a>
+      <h1>2048</h1>
+      <p class="tag">Merge tiles to make a 2048 tile.</p>
+    </header>
+
+    <section class="stage">
+      <canvas id="screen" aria-label="2048 game screen"></canvas>
+      <div class="pad" aria-label="Game buttons">
+        <button type="button" data-key="left" aria-label="Left">◀</button>
+        <button type="button" data-key="up" aria-label="Up">▲</button>
+        <button type="button" data-key="down" aria-label="Down">▼</button>
+        <button type="button" data-key="right" aria-label="Right">▶</button>
+        <button type="button" data-key="space" class="wide">space</button>
+      </div>
+      <div class="toolbar">
+        <button type="button" id="restart">↺ Restart</button>
+        <span class="hint">Keyboard works anywhere on the page. On a phone, tap the screen or use the buttons.</span>
+        <span id="error" hidden></span>
+      </div>
+    </section>
+
+    <section class="rules">
+      <h2>How to play</h2>
+      <dl>
+        <dt>Goal</dt><dd>Merge tiles to make a 2048 tile.</dd>
+        <dt>Keys</dt><dd>Arrow keys, or the buttons under the screen.</dd>
+        <dt>Phone</dt><dd>Swipe up, down, left or right.</dd>
+        <dt>How</dt><dd>Every move slides all tiles. Two touching tiles with the same number merge into one. A new 2 or 4 appears after each move.</dd>
+        <dt>Score</dt><dd>Each merge adds the new tile's value to your score.</dd>
+        <dt>Lose</dt><dd>The board is full and nothing can merge.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <script src="engine.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

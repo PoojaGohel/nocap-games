@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mines</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <a class="back" href="../../index.html">← All games</a>
+      <h1>Mines</h1>
+      <p class="tag">Open every square that doesn't have a bomb. There are 15 bombs.</p>
+    </header>
+
+    <section class="stage">
+      <canvas id="screen" aria-label="Mines game screen"></canvas>
+      <div class="pad" aria-label="Game buttons">
+        <button type="button" data-key="left" aria-label="Left">◀</button>
+        <button type="button" data-key="up" aria-label="Up">▲</button>
+        <button type="button" data-key="down" aria-label="Down">▼</button>
+        <button type="button" data-key="right" aria-label="Right">▶</button>
+        <button type="button" data-key="space" class="wide">space</button>
+      </div>
+      <div class="toolbar">
+        <button type="button" id="restart">↺ Restart</button>
+        <span class="hint">Keyboard works anywhere on the page. On a phone, tap the screen or use the buttons.</span>
+        <span id="error" hidden></span>
+      </div>
+    </section>
+
+    <section class="rules">
+      <h2>How to play</h2>
+      <dl>
+        <dt>Goal</dt><dd>Open every square that doesn't have a bomb. There are 15 bombs.</dd>
+        <dt>Open</dt><dd>Tap or click a square. Your first tap is always safe.</dd>
+        <dt>Flag</dt><dd>Hold a square to plant a 🚩, or turn on flag mode (top right, or press <kbd>F</kbd>).</dd>
+        <dt>Numbers</dt><dd>A number tells you how many bombs touch that square, including diagonals.</dd>
+        <dt>Lose</dt><dd>Open a bomb. Win by opening all the safe squares.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <script src="engine.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

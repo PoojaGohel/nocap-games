@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Unscramble</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <a class="back" href="../../index.html">← All games</a>
+      <h1>Unscramble</h1>
+      <p class="tag">The letters of a Gen Z word are mixed up. Put them back in order. CIRZZ → RIZZ.</p>
+    </header>
+
+    <section class="stage">
+      <canvas id="screen" aria-label="Unscramble game screen"></canvas>
+      <div class="pad" aria-label="Game buttons">
+        <button type="button" data-key="left" aria-label="Left">◀</button>
+        <button type="button" data-key="up" aria-label="Up">▲</button>
+        <button type="button" data-key="down" aria-label="Down">▼</button>
+        <button type="button" data-key="right" aria-label="Right">▶</button>
+        <button type="button" data-key="space" class="wide">space</button>
+      </div>
+      <div class="toolbar">
+        <button type="button" id="restart">↺ Restart</button>
+        <span class="hint">Keyboard works anywhere on the page. On a phone, tap the screen or use the buttons.</span>
+        <span id="error" hidden></span>
+      </div>
+    </section>
+
+    <section class="rules">
+      <h2>How to play</h2>
+      <dl>
+        <dt>Goal</dt><dd>The letters of a Gen Z word are mixed up. Put them back in order. CIRZZ → RIZZ.</dd>
+        <dt>Controls</dt><dd>Tap the yellow letters in order, or type them on a keyboard. <kbd>Backspace</kbd> or ⌫ undoes.</dd>
+        <dt>Buttons</dt><dd>🔀 mixes the letters again. 💡 fills in the next letter but costs 5 points.</dd>
+        <dt>Score</dt><dd>10 points per letter. Words get longer as you solve more. You have 90 seconds.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <script src="engine.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Fishing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <a class="back" href="../../index.html">← All games</a>
+      <h1>Fishing</h1>
+      <p class="tag">Catch as many points of fish as you can in 60 seconds.</p>
+    </header>
+
+    <section class="stage">
+      <canvas id="screen" aria-label="Fishing game screen"></canvas>
+      <div class="pad" aria-label="Game buttons">
+        <button type="button" data-key="left" aria-label="Left">◀</button>
+        <button type="button" data-key="up" aria-label="Up">▲</button>
+        <button type="button" data-key="down" aria-label="Down">▼</button>
+        <button type="button" data-key="right" aria-label="Right">▶</button>
+        <button type="button" data-key="space" class="wide">space</button>
+      </div>
+      <div class="toolbar">
+        <button type="button" id="restart">↺ Restart</button>
+        <span class="hint">Keyboard works anywhere on the page. On a phone, tap the screen or use the buttons.</span>
+        <span id="error" hidden></span>
+      </div>
+    </section>
+
+    <section class="rules">
+      <h2>How to play</h2>
+      <dl>
+        <dt>Goal</dt><dd>Catch as many points of fish as you can in 60 seconds.</dd>
+        <dt>Controls</dt><dd>Hold <kbd>space</kbd> or <kbd>↓</kbd> (or hold the screen) to drop the hook. Let go to reel up. <kbd>←</kbd> <kbd>→</kbd> move the boat.</dd>
+        <dt>Phone</dt><dd>Hold where you want to fish. The boat follows your finger.</dd>
+        <dt>Points</dt><dd>🐟 1 · 🐠 3 · 🐡 5 · 🦑 10 (deep and fast) · 🥾 0</dd>
+        <dt>Danger</dt><dd>A 🦈 shark steals the fish off your hook if it touches it.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <script src="engine.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

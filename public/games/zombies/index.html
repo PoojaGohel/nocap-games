@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Zombies</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <a class="back" href="../../index.html">← All games</a>
+      <h1>Zombies</h1>
+      <p class="tag">Survive the zombie waves as long as you can.</p>
+    </header>
+
+    <section class="stage">
+      <canvas id="screen" aria-label="Zombies game screen"></canvas>
+      <div class="pad" aria-label="Game buttons">
+        <button type="button" data-key="left" aria-label="Left">◀</button>
+        <button type="button" data-key="up" aria-label="Up">▲</button>
+        <button type="button" data-key="down" aria-label="Down">▼</button>
+        <button type="button" data-key="right" aria-label="Right">▶</button>
+        <button type="button" data-key="space" class="wide">space</button>
+      </div>
+      <div class="toolbar">
+        <button type="button" id="restart">↺ Restart</button>
+        <span class="hint">Keyboard works anywhere on the page. On a phone, tap the screen or use the buttons.</span>
+        <span id="error" hidden></span>
+      </div>
+    </section>
+
+    <section class="rules">
+      <h2>How to play</h2>
+      <dl>
+        <dt>Goal</dt><dd>Survive the zombie waves as long as you can.</dd>
+        <dt>Move</dt><dd><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> or arrow keys. On a phone, hold and drag where to walk.</dd>
+        <dt>Shoot</dt><dd>Automatic! You always fire at the closest zombie.</dd>
+        <dt>Power-ups</dt><dd>⚡ = rapid fire for 5 seconds · 💊 = +1 ❤️ (up to 5). Zombies sometimes drop them.</dd>
+        <dt>Waves</dt><dd>A new wave every 15 seconds: more and faster zombies. Big zombies take 3 hits.</dd>
+        <dt>Lose</dt><dd>Each bite costs a ❤️. You blink and are safe for a moment after a bite.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <script src="engine.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

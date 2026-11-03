@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <a class="back" href="../../index.html">← All games</a>
+      <h1>Rock Paper Scissors · vs bot</h1>
+      <p class="tag">Beat the bot to 10 wins. Rock beats scissors, scissors beats paper, paper beats rock.</p>
+    </header>
+
+    <section class="stage">
+      <canvas id="screen" aria-label="Rock Paper Scissors game screen"></canvas>
+      <div class="pad" aria-label="Game buttons">
+        <button type="button" data-key="left" aria-label="Left">◀</button>
+        <button type="button" data-key="up" aria-label="Up">▲</button>
+        <button type="button" data-key="down" aria-label="Down">▼</button>
+        <button type="button" data-key="right" aria-label="Right">▶</button>
+        <button type="button" data-key="space" class="wide">space</button>
+      </div>
+      <div class="toolbar">
+        <button type="button" id="restart">↺ Restart</button>
+        <span class="hint">Keyboard works anywhere on the page. On a phone, tap the screen or use the buttons.</span>
+        <span id="error" hidden></span>
+      </div>
+    </section>
+
+    <section class="rules">
+      <h2>How to play</h2>
+      <dl>
+        <dt>Goal</dt><dd>Beat the bot to 10 wins. Rock beats scissors, scissors beats paper, paper beats rock.</dd>
+        <dt>Controls</dt><dd>Tap a hand, or press <kbd>R</kbd> <kbd>P</kbd> <kbd>S</kbd> (or <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd>).</dd>
+        <dt>The bot</dt><dd>It remembers what you usually play after each hand, and plays whatever beats its guess. It tells you what it guessed.</dd>
+        <dt>Tip</dt><dd>Humans fall into patterns. Try to be random, or set a trap and switch it up.</dd>
+        <dt>Rematch</dt><dd>Tap after a match. The bot keeps its memory of you.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <script src="engine.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pong Duel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <a class="back" href="../../index.html">← All games</a>
+      <h1>Pong Duel · 2 players</h1>
+      <p class="tag">Hit the ball past the other player's paddle to score.</p>
+    </header>
+
+    <section class="stage">
+      <canvas id="screen" aria-label="Pong Duel game screen"></canvas>
+      <div class="pad" aria-label="Game buttons">
+        <button type="button" data-key="left" aria-label="Left">◀</button>
+        <button type="button" data-key="up" aria-label="Up">▲</button>
+        <button type="button" data-key="down" aria-label="Down">▼</button>
+        <button type="button" data-key="right" aria-label="Right">▶</button>
+        <button type="button" data-key="space" class="wide">space</button>
+      </div>
+      <div class="toolbar">
+        <button type="button" id="restart">↺ Restart</button>
+        <span class="hint">Keyboard works anywhere on the page. On a phone, tap the screen or use the buttons.</span>
+        <span id="error" hidden></span>
+      </div>
+    </section>
+
+    <section class="rules">
+      <h2>How to play</h2>
+      <dl>
+        <dt>Goal</dt><dd>Hit the ball past the other player's paddle to score.</dd>
+        <dt class="pink">Pink</dt><dd><kbd>W</kbd> up, <kbd>S</kbd> down. Left paddle.</dd>
+        <dt class="blue">Blue</dt><dd><kbd>↑</kbd> up, <kbd>↓</kbd> down. Right paddle.</dd>
+        <dt>Phone</dt><dd>Each player drags a finger on their own half of the screen.</dd>
+        <dt>Win</dt><dd>First to 7 points. The ball gets faster with every hit.</dd>
+        <dt>Tip</dt><dd>Hit the ball with the edge of your paddle for a sharp angle.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <script src="engine.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
