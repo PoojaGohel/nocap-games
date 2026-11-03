@@ -2,6 +2,8 @@
 
 **64 free games for everyone. No download, no sign-up. Pick one and play!**
 
+▶ **Play now: https://poojagohel.github.io/nocap-games/**
+
 Quick games for a spare minute: arcade classics, puzzles, brain teasers, games against a bot, and games to play with a friend on the same device.
 
 ## Playing
@@ -132,7 +134,17 @@ npm run preview    # serves dist/ to check the build
 
 ### Publish
 
-Run `npm run build`, then **upload everything inside `dist/`** to any static host (Netlify, Vercel, GitHub Pages, cPanel, S3...). Paths are relative, so the site also works from a subfolder. No server code is needed.
+**Live site:** https://poojagohel.github.io/nocap-games/
+
+To update the live site on GitHub Pages:
+
+```
+npm run deploy
+```
+
+This builds the site and pushes `dist/` to the `gh-pages` branch, which GitHub Pages serves. The update shows up within a minute or two. Commit and push your code to `main` as usual; `npm run deploy` only publishes the built site.
+
+To host it somewhere else instead, run `npm run build`, then **upload everything inside `dist/`** to any static host (Netlify, Vercel, GitHub Pages, cPanel, S3...). Paths are relative, so the site also works from a subfolder. No server code is needed.
 
 ### Project layout
 
