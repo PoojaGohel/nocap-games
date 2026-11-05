@@ -15,9 +15,11 @@ npx serve .
 
 ## How to play
 
-- **What:** Not a game yet. It's a bouncing ball animation to learn gameloop.
-- **Try:** Change dx and dy to change the speed, or "hotpink" to change the color.
-- **Challenge:** Add pressed("space") to make the ball jump.
+- **Goal:** Keep the ball in the air. Don't let it touch the floor.
+- **Kick:** Tap the ball to kick it up. Hit it on the left to send it right, and the other way round.
+- **Keys:** Press space when the ball is in the pink kick zone at the bottom.
+- **Stars:** Bounce the ball through a ⭐ for +5.
+- **Harder:** The ball gets heavier as your score goes up.
 
 Press **↺ Restart** under the game screen to start over.
 

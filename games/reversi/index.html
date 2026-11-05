@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Reversi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <a class="back" href="../../index.html">← All games</a>
+      <h1>Reversi · vs bot</h1>
+      <p class="tag">Trap the bot's discs between yours to flip them. Most discs at the end wins.</p>
+    </header>
+
+    <section class="stage">
+      <canvas id="screen" aria-label="Reversi game screen"></canvas>
+      <div class="pad" aria-label="Game buttons">
+        <button type="button" data-key="left" aria-label="Left">◀</button>
+        <button type="button" data-key="up" aria-label="Up">▲</button>
+        <button type="button" data-key="down" aria-label="Down">▼</button>
+        <button type="button" data-key="right" aria-label="Right">▶</button>
+        <button type="button" data-key="space" class="wide">space</button>
+      </div>
+      <div class="toolbar">
+        <button type="button" id="restart">↺ Restart</button>
+        <span class="hint">Keyboard works anywhere on the page. On a phone, tap the screen or use the buttons.</span>
+        <span id="error" hidden></span>
+      </div>
+    </section>
+
+    <section class="rules">
+      <h2>How to play</h2>
+      <dl>
+        <dt>Goal</dt><dd>Have more PINK discs than BLUE discs when the board is full.</dd>
+        <dt>Move</dt><dd>Place a disc so a line of the bot's discs is trapped between it and another of yours. The trapped discs flip to your color. The small dots show where you can go.</dd>
+        <dt>Keys</dt><dd>Tap a square, or move with the arrow keys and press <kbd>space</kbd>.</dd>
+        <dt>Skip</dt><dd>If you can't move, your turn is skipped. The game ends when nobody can move.</dd>
+        <dt>Bot</dt><dd>It loves corners and edges, and it counts how many discs each move flips.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <script src="engine.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
