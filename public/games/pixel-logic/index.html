@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pixel Logic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <a class="back" href="../../index.html">← All games</a>
+      <h1>Pixel Logic</h1>
+      <p class="tag">Use the number clues to fill in the hidden picture.</p>
+    </header>
+
+    <section class="stage">
+      <canvas id="screen" aria-label="Pixel Logic game screen"></canvas>
+      <div class="pad" aria-label="Game buttons">
+        <button type="button" data-key="left" aria-label="Left">◀</button>
+        <button type="button" data-key="up" aria-label="Up">▲</button>
+        <button type="button" data-key="down" aria-label="Down">▼</button>
+        <button type="button" data-key="right" aria-label="Right">▶</button>
+        <button type="button" data-key="space" class="wide">space</button>
+      </div>
+      <div class="toolbar">
+        <button type="button" id="restart">↺ Restart</button>
+        <span class="hint">Keyboard works anywhere on the page. On a phone, tap the screen or use the buttons.</span>
+        <span id="error" hidden></span>
+      </div>
+    </section>
+
+    <section class="rules">
+      <h2>How to play</h2>
+      <dl>
+        <dt>Goal</dt><dd>Find the hidden picture by filling in the right squares.</dd>
+        <dt>Clues</dt><dd>The numbers by each row and column are the runs of filled squares in that line, in order. &quot;3 1&quot; means 3 filled, a gap, then 1 more.</dd>
+        <dt>Tap</dt><dd>Tap a square to fill it. Switch to ❌ mode to mark squares you know are empty.</dd>
+        <dt>Keys</dt><dd>Arrows to move, <kbd>space</kbd> to fill, <kbd>X</kbd> to mark.</dd>
+        <dt>Levels</dt><dd>Pictures get bigger as you solve them, from 5 × 5 up to 8 × 8.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <script src="engine.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
